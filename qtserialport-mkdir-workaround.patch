@@ -1,0 +1,12 @@
+diff -uNr qtserialport.orig/src/serialport/qt4support/install-helper.pri qtserialport/src/serialport/qt4support/install-helper.pri
+--- qtserialport.orig/src/serialport/qt4support/install-helper.pri	2017-02-04 17:33:39.790481339 +0300
++++ qtserialport/src/serialport/qt4support/install-helper.pri	2017-02-04 17:33:59.264871583 +0300
+@@ -1,7 +1,7 @@
+ QTSERIALPORT_PROJECT_INCLUDEDIR = $$QTSERIALPORT_BUILD_ROOT/include/QtSerialPort
+ QTSERIALPORT_PROJECT_INCLUDEDIR ~=s,/,$$QMAKE_DIR_SEP,
+ 
+-system("$$QMAKE_MKDIR $$QTSERIALPORT_PROJECT_INCLUDEDIR")
++system("mkdir -p $$QTSERIALPORT_PROJECT_INCLUDEDIR")
+ 
+ for(header_file, PUBLIC_HEADERS) {
+    header_file ~=s,/,$$QMAKE_DIR_SEP,
